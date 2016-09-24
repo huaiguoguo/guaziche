@@ -2,21 +2,21 @@
 namespace frontend\controllers;
 
 
-use common\models\CarInfo;
-use common\models\FrontendLoginForm;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use common\models\Topic;
+use common\models\Comment;
+use common\models\CarInfo;
 use common\models\LoginForm;
+use common\models\FrontendLoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-use common\models\Topic;
-use common\models\Comment;
 
 /**
  * Site controller
@@ -82,9 +82,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $data = [];
-        $data['new_list'] = CarInfo::find()->orderBy("created_at asc")->limit(20)->all();
+        $data                    = [];
+        $data['new_list']        = CarInfo::find()->orderBy("created_at asc")->limit(20)->all();
         $data['down_price_list'] = CarInfo::find()->orderBy("created_at desc")->limit(20)->all();
+
         return $this->render('index', $data);
     }
 
@@ -94,6 +95,7 @@ class SiteController extends Controller
         $data = [];
 
         $data['list'] = CarInfo::find()->limit(20)->all();
+
         return $this->render('list', $data);
     }
 
