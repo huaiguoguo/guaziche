@@ -43,11 +43,8 @@ AppAsset::addScript($this, '/js/index.copy.js');
                     <div class="ppmore">
                         <div class="leftline"></div>
                         <p>所有品牌</p>
-                        <table class="tbl">
-                            <tbody>
                                <?=$this->render('/layouts/brands');?>
-                            </tbody>
-                        </table>
+
                     </div>
                 </div>
                 <div class="sx-price">
