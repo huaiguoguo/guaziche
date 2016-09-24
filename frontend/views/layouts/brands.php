@@ -18,8 +18,8 @@ ksort($brands);
 $one = array_splice($brands, 0, 11);
 $two = $brands;
 
-$list[] = $one;
-$list[] = $two;
+$list[1] = $one;
+$list['r'] = $two;
 
 ?>
 
@@ -27,7 +27,7 @@ $list[] = $two;
 
 
 <?php foreach ($list as $key => $value): ?>
-    <table class="tb<?=$key+1;?>">
+    <table class="tb<?=$key;?>">
         <tbody>
         <?php foreach ($value as $ke => $val): ?>
             <tr>
