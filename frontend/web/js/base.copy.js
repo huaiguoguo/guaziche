@@ -4938,7 +4938,7 @@
                     })[0][1]] || "-", y.set("cainfo", JSON.stringify(e), {
                     expires: 31536e3,
                     path: "/",
-                    domain: ".guazi.com"
+                    domain: ".che.phpdx.cn"
                 })
             }
             var n = p(),
@@ -5066,7 +5066,7 @@
         }, e.exports = r
     }, 139: function (e, t) {
         function n() {
-            console.log("\n                            .__ \n   ____  __ _______  _______|__|\n  / ___\\|  |  \\__  \\ \\___   /  |\n / /_/  >  |  // __ \\_/    /|  |\n \\___  /|____/(____  /_____ \\__|\n/_____/            \\/      \\/   \n \n想来瓜子工作?\n请将简历发送至：jipengcheng@guazi.com（邮件标题请注明来自console）")
+            console.log("\n                            .__ \n   ____  __ _______  _______|__|\n  / ___\\|  |  \\__  \\ \\___   /  |\n / /_/  >  |  // __ \\_/    /|  |\n \\___  /|____/(____  /_____ \\__|\n/_____/            \\/      \\/   \n \n想要这样的程序源码?\n请联系扣扣：290559038（验证信息请填写 console）")
         }
         n()
     }, 141: function (module, exports, __webpack_require__) {

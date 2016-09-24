@@ -18,7 +18,7 @@ class AppAsset extends AssetBundle
 
     public $js = [
         "js/jquery-1.11.1.js",
-        "js/common.js",
+//        "js/common.js",
         "js/base.copy.js"
     ];
 
