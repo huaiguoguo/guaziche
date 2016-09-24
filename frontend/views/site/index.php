@@ -42,7 +42,7 @@ AppAsset::addScript($this, '/js/index.copy.js');
                     </div>
                     <div class="ppmore">
                         <div class="leftline"></div>
-                        <p>所有品牌abc</p>
+                        <p>所有品牌</p>
                         <table class="tbl">
                             <tbody>
                                <?=$this->render('/layouts/brands');?>
