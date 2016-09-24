@@ -18,7 +18,7 @@ ksort($brands);
 $one = array_splice($brands, 0, 11);
 $two = $brands;
 
-$list[1] = $one;
+$list['l'] = $one;
 $list['r'] = $two;
 
 ?>
