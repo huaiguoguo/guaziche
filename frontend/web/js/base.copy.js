@@ -3911,8 +3911,8 @@
                 rootDir: "",
                 addVersion: !1,
                 useCombine: !1,
-                cookieDomain: "localhost",
-                documentDomain: "localhost",
+                cookieDomain: "che.phpdx.cn",
+                documentDomain: "che.phpdx.cn",
                 iframeProxyUrl: "/iframeproxy.html",
                 defaultServer: "sta.ganji.com",
                 servers: ["sta.guazistatic.com"],
@@ -4926,8 +4926,8 @@
             y.get("sessionid");
             return t.guid = n, t.userid = y.get("userid") || "-", t.sessionid = y.get("sessionid") || m.generateUUIDV4(), y.set("sessionid", t.sessionid, {
                 path: "/",
-                domain: ".guazi.com"
-            }), t.landing = b.landing || (_.hostname.indexOf("guazi.com") > 0 ? 0 : 1), t
+                domain: ".che.phpdx.cn"
+            }), t.landing = b.landing || (_.hostname.indexOf("che.phpdx.cn") > 0 ? 0 : 1), t
         }
 
         function i(e) {
