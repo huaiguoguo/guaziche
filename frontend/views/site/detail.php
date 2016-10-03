@@ -12,11 +12,11 @@ AppAsset::addScript($this, '/js/detail.copy.js');
 
 
 $detail_data = $detail->detail;
-dump($detail_data);
-dump(gettype($detail_data));
+//dump($detail_data);
+//dump(gettype($detail_data));
 
 $data = json_decode($detail_data, false);
-dump($data);
+//dump($data);
 
 
 
