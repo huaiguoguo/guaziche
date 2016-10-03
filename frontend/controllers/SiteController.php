@@ -93,18 +93,26 @@ class SiteController extends Controller
     public function actionList()
     {
         $data = [];
-
-        $data['list'] = CarInfo::find()->limit(20)->all();
-
+        $select = ['id', 'registration_date', 'present_price', 'original_price', 'mileage', 'title', 'url', 'img_url', 'city'];
+        $list = CarInfo::find()->select($select)->limit(20)->asArray()->all();
+        $data['list'] = $list;
         return $this->render('list', $data);
     }
 
 
     public function actionDetail()
     {
-        $data = [];
 
+        $data = [];
+        $id   = Yii::$app->request->get('id');
+        if(!$id){
+            return $this->redirect('/');
+        }
+
+        $detail = CarInfo::findOne($id);
+        $data['detail'] = $detail;
         return $this->render('detail', $data);
+
     }
 
 

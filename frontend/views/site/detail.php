@@ -9,9 +9,18 @@ use frontend\assets\AppAsset;
 
 
 AppAsset::addScript($this, '/js/detail.copy.js');
+
+
+$detail_data = $detail->detail;
+dump($detail_data);
+dump(gettype($detail_data));
+
+$data = json_decode($detail_data, false);
+dump($data);
+
+
+
 ?>
-
-
 
 
 <div class="crumbs">
@@ -31,7 +40,6 @@ AppAsset::addScript($this, '/js/detail.copy.js');
 
         <!-- 帖子基本信息 -->
         <div class="laybox clearfix">
-
             <!-- 图片展示组件 -->
             <div class="det-sumleft slideshow">
                 <div class="dt-sumpic" data-role="imgContainer">
@@ -39,246 +47,247 @@ AppAsset::addScript($this, '/js/detail.copy.js');
                     <a href="javascript:void(0);" data-role="imgArrow" class="arrow-next next"></a>
                     <p class="amount"><i class="fc-org" data-role="currentNumber">1</i>/30</p>
                     <ul class="det-picside">
+
                         <li data-role="img" style="display: block">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img src="http://image.guazistatic.com/gz01160924/11/11/13023bdd3bfd3fc5689be09356bb3245.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                src="http://image.guazistatic.com/gz01160924/11/11/13023bdd3bfd3fc5689be09356bb3245.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img src="http://image.guazistatic.com/gz01160924/11/11/08b6eb1638acf6424ad10385b0957a6f.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                src="http://image.guazistatic.com/gz01160924/11/11/08b6eb1638acf6424ad10385b0957a6f.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/4d19aee209cfd15e7fa6c80a51c07c8b.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/4d19aee209cfd15e7fa6c80a51c07c8b.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/69313cc0067b20e10651dac8aaccf5b6.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/69313cc0067b20e10651dac8aaccf5b6.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/383c5132253d8ca4e34addc86070ea4b.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/383c5132253d8ca4e34addc86070ea4b.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/98143fb8aba537dfb53f866540779fe0.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/98143fb8aba537dfb53f866540779fe0.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/aa93d7f6c1a174cb8786d59dfdd5cfd7.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/aa93d7f6c1a174cb8786d59dfdd5cfd7.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/eb5569a9264e48a17ba090f9c0d5f740.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/eb5569a9264e48a17ba090f9c0d5f740.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/813b873bbbe888ee5d5171b902af305a.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/813b873bbbe888ee5d5171b902af305a.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/feb5540cc7a4d7cdbe0de618ae7bf539.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/feb5540cc7a4d7cdbe0de618ae7bf539.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/c0cb41cfbbaa4a28f20107e493ee1857.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/c0cb41cfbbaa4a28f20107e493ee1857.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/aaea3b56dde0cd9dd1e4255087df76c2.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/aaea3b56dde0cd9dd1e4255087df76c2.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/61f4fdc51ebedaaa0ff90de5bc49b4ed.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/61f4fdc51ebedaaa0ff90de5bc49b4ed.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/e4e749e1c842f3a8894695b038aa8816.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/e4e749e1c842f3a8894695b038aa8816.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/d25fc2e3d0a8d42100bd928bc1492619.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/d25fc2e3d0a8d42100bd928bc1492619.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/1bee47f84a277841ea1dda8d3e7ead82.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/1bee47f84a277841ea1dda8d3e7ead82.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/e9318a5e185a60d9ce6ab59d3bbb5fef.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/e9318a5e185a60d9ce6ab59d3bbb5fef.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/f40579294d52b92aab4e6b41289db69f.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/f40579294d52b92aab4e6b41289db69f.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/e4b96d0512b295de7bfcea962c223172.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/e4b96d0512b295de7bfcea962c223172.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/a39e662f1118bfafd8beff859d770d7f.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/a39e662f1118bfafd8beff859d770d7f.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/fbc2f44e1078eb5cbb7db37a034074d8.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/fbc2f44e1078eb5cbb7db37a034074d8.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/fc595c2ca1581bf448cd68f2969cc3b0.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/fc595c2ca1581bf448cd68f2969cc3b0.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/2dd791d159c3aa6fb67fe7a3b7fd5bf2.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/2dd791d159c3aa6fb67fe7a3b7fd5bf2.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/8c32c6e34b154ca8db911fbab52559f7.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/8c32c6e34b154ca8db911fbab52559f7.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/42819c5c1c820a52993d974e183a9025.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/42819c5c1c820a52993d974e183a9025.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/98dc30b6b1c02ec93d28c5d152b9bb85.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/98dc30b6b1c02ec93d28c5d152b9bb85.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/29b130e2c034f2a796e4468ed469719b.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/29b130e2c034f2a796e4468ed469719b.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/de5b883d453cacbb581264268790062b.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/de5b883d453cacbb581264268790062b.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/4270ae4008cf234ba9a9984c91b2167a.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/4270ae4008cf234ba9a9984c91b2167a.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                         <li data-role="img" style="display: none">
 
                             <!-- 车源售卖状态显示 -->
 
-                            <img data-src="http://image.guazistatic.com/gz01160924/11/11/4bc83d811eaec22123626305923476e4.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
-                                 alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
+                            <img
+                                data-src="http://image.guazistatic.com/gz01160924/11/11/4bc83d811eaec22123626305923476e4.jpg@base@tag=imgScale&w=600&h=400&c=1&m=2&q=88"
+                                alt="现代ix25 2015款 1.6 自动 GLS 两驱智能型">
                         </li>
-
                     </ul>
                 </div>
                 <div class="dt-transcont clearfix">
@@ -288,7 +297,8 @@ AppAsset::addScript($this, '/js/detail.copy.js');
                             <ul class="dt-thumb-img clearfix">
 
                                 <li class="active" data-role="thumb" data-index="0"><a
-                                        href="javascript:void(0);"><span></span><img
+                                        href="javascript:void(0);"><span></span>
+                                        <img
                                             src="http://image.guazistatic.com/gz01160924/11/11/13023bdd3bfd3fc5689be09356bb3245.jpg@base@tag=imgScale&w=90&h=60&c=1&m=2&q=88"></a>
                                 </li>
 
@@ -332,8 +342,12 @@ AppAsset::addScript($this, '/js/detail.copy.js');
                                             src="http://image.guazistatic.com/gz01160924/11/11/c0cb41cfbbaa4a28f20107e493ee1857.jpg@base@tag=imgScale&w=90&h=60&c=1&m=2&q=88"></a>
                                 </li>
 
-                                <li data-role="thumb" data-index="11"><a href="javascript:void(0);"><span></span><img
-                                            src="http://image.guazistatic.com/gz01160924/11/11/aaea3b56dde0cd9dd1e4255087df76c2.jpg@base@tag=imgScale&w=90&h=60&c=1&m=2&q=88"></a>
+                                <li data-role="thumb" data-index="11">
+                                    <a href="javascript:void(0);">
+                                        <span></span>
+                                        <img
+                                            src="http://image.guazistatic.com/gz01160924/11/11/aaea3b56dde0cd9dd1e4255087df76c2.jpg@base@tag=imgScale&w=90&h=60&c=1&m=2&q=88">
+                                    </a>
                                 </li>
                             </ul>
                             <ul class="dt-thumb-img clearfix">
@@ -411,7 +425,7 @@ AppAsset::addScript($this, '/js/detail.copy.js');
                                 <li data-role="thumb" data-index="29"><a href="javascript:void(0);"><span></span><img
                                             src="http://image.guazistatic.com/gz01160924/11/11/4bc83d811eaec22123626305923476e4.jpg@base@tag=imgScale&w=90&h=60&c=1&m=2&q=88"></a>
                                 </li>
-
+                            </ul>
                         </div>
                     </div>
                     <a href="javascript:void(0);" class="fr tm-arrow-next next" data-role="thumbArrow"></a>
@@ -419,7 +433,7 @@ AppAsset::addScript($this, '/js/detail.copy.js');
             </div>
             <div class="det-sumright appoint">
                 <div class="dt-titbox">
-                    <h1 class="dt-titletype" title="现代ix25 2015款 1.6 自动 GLS 两驱智能型">现代ix25 2015款 1.6 自动 GLS 两驱智能型</h1>
+                    <h1 class="dt-titletype" title="<?=$detail->title;?>"><?=$detail->title;?></h1>
                     <div class="dt-titleinfo clearfix">
                         <p class="car-error fr">
                             <a rel="nofollow" href="javascript:void(0)" data-role="feed_back" class="feed_back"><i></i>车源信息纠错</a>
@@ -429,13 +443,13 @@ AppAsset::addScript($this, '/js/detail.copy.js');
                             <!-- <li><span class="bg-span" data-widget="app/ms_v2/common/detail_page.js#storeFavorite" data-premier="" data-ref='{"puid":"3000497097","title":"\u73b0\u4ee3ix25 2015\u6b3e 1.6 \u81ea\u52a8 GLS \u4e24\u9a71\u667a\u80fd\u578b","url":"http:\/\/www.ganji.com\/cs\/3000497097x.htm"}'><a href="#" title=""><i class="ico-collect"></i>收藏</a></span></li>-->
                         </ul>
 
-                        <span style="color:#999">车源号：</span><span style="color:#000">HC-5089877</span>
+                        <span style="color:#999">车源号：</span><span style="color:#000"><?=$detail->car_number;?></span>
                     </div>
                 </div>
                 <div class="basic-box">
                     <div class="pricebox">
                         <i class="ico-txt ico-mt">车主报价：</i>
-                        <span class="fc-org pricestype"><b class="f30 numtype">&yen;12.58</b>万</span>
+                        <span class="fc-org pricestype"><b class="f30 numtype">&yen;<?php ;?></b>万</span>
                         <span class="f14">新车价(含税)<font color="#f60">15.50万</font>,
                             省<font color="#f60">2.92万</font></span>
                     </div>
@@ -593,8 +607,9 @@ AppAsset::addScript($this, '/js/detail.copy.js');
                 </div>
                 <!--弹窗结束-->
             </div>
-            <div class="lpn_ctrl_group" style="width: 26px;"><a href="javascript:;" class="lpn_close"
-                                                                style="margin-left: 3px;">关闭</a></div>
+            <div class="lpn_ctrl_group" style="width: 26px;">
+                <a href="javascript:;" class="lpn_close" style="margin-left: 3px;">关闭</a>
+            </div>
         </script>
         <!-- 检测结果 -->
         <div class="laybox combox">
@@ -624,43 +639,33 @@ AppAsset::addScript($this, '/js/detail.copy.js');
                                         <dt>事故排查</dt>
                                         <dd>
                                             <span class="d-w1">排除重大碰撞（共18项）</span>
-                                            <span class="d-w2">
-                                                                                            <i class="via-icon03"></i>
-                                                                                     </span>
+                                            <span class="d-w2">  <i class="via-icon03"></i>  </span>
                                         </dd>
                                         <dd>
                                             <span class="d-w1">排除泡水（共8项）</span>
-                                            <span class="d-w2">
-                                                                                            <i class="via-icon03"></i>
-                                                                                     </span>
+                                            <span class="d-w2"> <i class="via-icon03"></i> </span>
                                         </dd>
                                         <dd>
                                             <span class="d-w1">排除火烧（共2项）</span>
-                                            <span class="d-w2">
-                                                                                            <i class="via-icon03"></i>
-                                                                                     </span>
+                                            <span class="d-w2">  <i class="via-icon03"></i> </span>
                                         </dd>
                                     </dl>
                                     <dl>
                                         <dt>外观内饰检测</dt>
                                         <dd>
                                             <span class="d-w1">外观修复检查（共51项）</span>
-                                            <span class="d-w2">
-                                                                                            <em class="fc-org">
-                                                    2项
-                                                </em>
+                                            <span class="d-w2">  <em class="fc-org"> 2项 </em>
                                                 <i class="via-icon04" data-role="show"
                                                    baidu_alog="pc_detail_checkXiaci&click&pc_detail_checkXiaci_c"></i>
-                                                                                                    <div class="d-pop"
-                                                                                                         style="display: none"
-                                                                                                         data-role="itemShow">
+                                                <div class="d-pop" style="display: none" data-role="itemShow">
                                                         <em class="arrow"></em>
                                                         <p class="tit">外观修复检查：</p>
                                                         <ul class="fc-9">
-                                                                                                                                                                                                <li>
-                                                                        有1处喷漆                                                                    </li>
+
+                                                            <li>
+                                                                        有1处喷漆  </li>
                                                                                                                                                                                                                                                                 <li>
-                                                                        有1处钣金修复                                                                    </li>
+                                                                        有1处钣金修复  </li>
                                                                                                                                                                                                                                                 </ul>
                                                         <p><a rel="nofollow"
                                                               data-gzlog="tracking_type=click&eventid=0110000000000083&carid=5089877"
@@ -1116,7 +1121,8 @@ AppAsset::addScript($this, '/js/detail.copy.js');
                         </div>
                         <div class="headline-bd" id="exterior_check">
                             <span class="headline yahei">外观内饰检测</span>
-                            <span class="f14">该车有漆面修复痕迹，有钣金修复痕迹，覆盖件无更换，外观有轻微缺陷。&nbsp该车安全系统无故障，灯光系统工作正常，设备正常，有加装，内饰整洁干净。</span>
+                            <span
+                                class="f14">该车有漆面修复痕迹，有钣金修复痕迹，覆盖件无更换，外观有轻微缺陷。&nbsp该车安全系统无故障，灯光系统工作正常，设备正常，有加装，内饰整洁干净。</span>
                         </div>
                         <div class="detectBox clearfix">
                             <div class="outward fl">

@@ -2,6 +2,7 @@
 
 use yii\web\View;
 use frontend\assets\AppAsset;
+use yii\helpers\Url;
 
 /**
  * Created by PhpStorm.
@@ -1608,28 +1609,28 @@ AppAsset::addScript($this, '/js/list.copy.js');
                 <!-- 车源售卖状态显示 -->
                 <div class="list-infoBox">
                     <a rel="nofollow" data-gzlog="tracking_type=click&eventid=0120000000000057&carid=4983575@39"
-                       baidu_alog='pc_list_xiangqingye&click&pc_list_xiangqingye_c' title="雪佛兰科鲁兹 2011款 1.6 自动 SE"
-                       target="_blank" class="imgtype" href="/nj/3000485830x.htm">
+                       baidu_alog='pc_list_xiangqingye&click&pc_list_xiangqingye_c' title="<?=$value['title'];?>"
+                       target="_blank" class="imgtype" href="<?=Url::toRoute(['site/detail', 'id'=>$value['id']]);?>">
                         <img width="290" height="194"
-                             src="<?=$value->img_url;?>"
-                             alt="<?=$value->title;?>">
+                             src="<?=$value['img_url'];?>"
+                             alt="<?=$value['title'];?>">
                     </a>
                     <p class="infoBox">
-                        <a baidu_alog='pc_list_xiangqingye&click&pc_list_xiangqingye_c' title="<?=$value->title;?>"
-                           href="/nj/3000485830x.htm" target="_blank" class="info-title">
-                            <?=$value->title;?>
+                        <a baidu_alog='pc_list_xiangqingye&click&pc_list_xiangqingye_c' title="<?=$value['title'];?>"
+                           href="<?=Url::toRoute(['site/detail', 'id'=>$value['id']]);?>" target="_blank" class="info-title">
+                            <?=$value['title'];?>
                         </a>
                     </p>
                     <p class="fc-gray">
-                        <span class="ctag-green"><?=$value->city;?></span>
-                        <span class=""><?=$value->registration_date;?></span>
-                        <em class="shuxian">|</em>行驶<?=$value->mileage;?>万公里
+                        <span class="ctag-green"><?=$value['city'];?></span>
+                        <span class=""><?=$value['registration_date'];?></span>
+                        <em class="shuxian">|</em>行驶<?=$value['mileage'];?>万公里
                     </p>
                     <p class="priType-s">
                   <span>
-                      <i class="fc-org priType"> <?=$value->present_price;?>万 </i>
+                      <i class="fc-org priType"> <?=$value['present_price'];?>万 </i>
                   </span>
-                        <s><?=$value->original_price;?>万</s>
+                        <s><?=$value['original_price'];?>万</s>
                     </p>
                 </div>
             </li>
