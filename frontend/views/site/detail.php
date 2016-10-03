@@ -16,7 +16,7 @@ $detail_data = $detail->detail;
 //dump(gettype($detail_data));
 
 $data = json_decode($detail_data, false);
-//dump($data);
+dump($data);
 
 
 
