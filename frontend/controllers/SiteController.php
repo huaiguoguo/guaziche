@@ -56,7 +56,7 @@ class SiteController extends Controller
             [
                 'class'      => 'yii\filters\PageCache',
                 'duration'   => 3600,
-                'only'       => ['index', 'list'],
+                'only'       => ['index', 'list', 'detail'],
 //                'dependency' => [
 //                    'class' => 'yii\caching\DbDependency',
 //                    'sql'   => 'SELECT count(*) FROM dx_topic;SELECT count(*) FROM dx_vote; SELECT count(*) FROM dx_topic;'
