@@ -9,7 +9,7 @@ return [
             'class'       => 'yii\db\Connection',
             'dsn'         => 'mysql:host=localhost;dbname=phpdx',
             'username'    => 'root',
-            'password'    => '7c2a5b53',
+            'password'    => '7C2a5b53&',
             'charset'     => 'utf8',
             'tablePrefix' => 'dx_',
         ],
