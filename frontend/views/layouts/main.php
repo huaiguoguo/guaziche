@@ -98,9 +98,9 @@ AppAsset::register($this);
             <a class="fr " baidu_alog="pc_index_top_tab&click&pc_index_top_tab_carfina_c"
                href="#" data-gzlog="tracking_type=click&eventid=0010000000000011"
                title="二手车分期付款">分期购车</a>
-            <a class="fl " baidu_alog="pc_index_top_tab&click&pc_index_top_tab_index_c"
+            <a class="fl active" baidu_alog="pc_index_top_tab&click&pc_index_top_tab_index_c"
                href="/" data-gzlog="tracking_type=click&eventid=0010000000000007" title="瓜子二手车">首页</a>
-            <a class="fl active" baidu_alog="pc_index_top_tab&click&pc_index_top_tab_buy_c"
+            <a class="fl" baidu_alog="pc_index_top_tab&click&pc_index_top_tab_buy_c"
                href="<?=\yii\helpers\Url::toRoute(['/site/list']);?>" data-gzlog="tracking_type=click&eventid=0010000000000008"
                title="全国个人二手车">我要买车</a>
             <a class="fl " baidu_alog="pc_index_top_tab&click&pc_index_top_tab_sell_c"
